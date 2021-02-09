@@ -1,4 +1,4 @@
-const { db } = require('./.env')
+const { db } = process.env.db || require('./.env')
 
 
 module.exports = {
