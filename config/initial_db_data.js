@@ -4,7 +4,8 @@ module.exports = async (app) => {
 
     if (parseInt(result.count) === 0) {
         console.log('Iniciando cadastro de dados')
-        const password = process.env.authSecret.split('').splice(0,10).reverse().join('') || require('../.env').authSecret.split('').splice(0,10).reverse().join('')
+        const requirePassword = process.env.authSecret|| require('../.env').authSecret
+        const password = requirePassword.split('').splice(0,10).reverse().join('') 
 
         const user = {
             id: 1,
