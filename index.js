@@ -1,8 +1,10 @@
+const dotenv = require("dotenv").config()
+
 const app = require('express')()
 const consign = require('consign')
 const db = require('./config/db')
 const start_db = require('./config/initial_db_data')
-const apiPort = process.env.PORT || 3150
+const apiPort = process.env.PORT
 
 app.db = db
 
