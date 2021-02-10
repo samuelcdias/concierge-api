@@ -1,5 +1,5 @@
 module.exports = async (app) => {  
-    
+    console.log('Checking database')
     const result = await app.db('users').count('id').first()
 
     if (parseInt(result.count) === 0) {
